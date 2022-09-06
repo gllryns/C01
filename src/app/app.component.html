@@ -1,0 +1,16 @@
+<header class="alert alert-primary text-center">
+  <h1 class="display-1">{{ titulo | titlecase }}</h1>
+  <h2 class="display-3">{{ subtitulo | uppercase }}</h2>
+</header>
+<div class="text-end text-light bg-dark p-2">
+  {{ fecha | date: "dd/MM/yyyy" }}
+</div>
+<span>{{ title }} app está running! y la version es {{ appversion }}</span>
+
+<div *ngIf="prods" class="productos">
+  <ul>
+    <div *ngFor="let prod of prods">
+      <li>{{ prod.name }}</li>
+    </div>
+  </ul>
+</div>
